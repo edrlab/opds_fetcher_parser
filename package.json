@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "@types/node-fetch": "^2.5.11",
+    "@types/tough-cookie": "^4.0.1",
+    "gts": "^3.1.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.23",
+    "r2-lcp-js": "^1.0.30",
+    "r2-opds-js": "^1.0.35",
+    "r2-shared-js": "^1.0.51",
+    "ts-fetch": "github:panaC/ts_fetch#132895f52167ca8b1d51549c9e597b12e4bc5c73"
+  }
+}
