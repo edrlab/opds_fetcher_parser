@@ -1,5 +1,5 @@
-import {Contributor} from '@r2-shared-js/models/metadata-contributor';
-import {IStringMap} from '@r2-shared-js/models/metadata-multilang';
+import {Contributor} from 'r2-shared-js/dist/es6-es2015/src/models/metadata-contributor';
+import {IStringMap} from 'r2-shared-js/dist/es6-es2015/src/models/metadata-multilang';
 // import { diMainGet } from "readium-desktop/main/di";
 
 // https://github.com/IDPF/epub3-samples/blob/master/30/regime-anticancer-arabic/EPUB/package.opf

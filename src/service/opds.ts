@@ -8,7 +8,7 @@ import {IOpdsResultView} from '../interface/opds';
 import {TaJsonDeserialize} from 'r2-lcp-js/dist/es6-es2015/src/serializable';
 import {OPDSPublication} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-publication';
 import {OPDSFeed} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2';
-import {Publication as R2Publication} from '@r2-shared-js/models/publication';
+import {Publication as R2Publication} from 'r2-shared-js/dist/es6-es2015/src/models/publication';
 import {IWebPubView} from '../interface/webpub';
 import {ok} from 'assert';
 import {OpdsFeedViewConverter} from '../converter/opds';

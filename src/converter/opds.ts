@@ -16,16 +16,16 @@ import {
 import {convertMultiLangStringToString} from './tools/localisation';
 import {ContentType} from '../utils/contentType';
 
-import {IWithAdditionalJSON, TaJsonSerialize} from '@r2-lcp-js/serializable';
-import {OPDSFeed} from '@r2-opds-js/opds/opds2/opds2';
-import {OPDSAuthenticationDoc} from '@r2-opds-js/opds/opds2/opds2-authentication-doc';
-import {OPDSFacet} from '@r2-opds-js/opds/opds2/opds2-facet';
-import {OPDSGroup} from '@r2-opds-js/opds/opds2/opds2-group';
-import {OPDSLink} from '@r2-opds-js/opds/opds2/opds2-link';
-import {OPDSProperties} from '@r2-opds-js/opds/opds2/opds2-properties';
-import {OPDSPublication} from '@r2-opds-js/opds/opds2/opds2-publication';
-import {Contributor} from '@r2-shared-js/models/metadata-contributor';
-import {Subject} from '@r2-shared-js/models/metadata-subject';
+import {IWithAdditionalJSON, TaJsonSerialize} from 'r2-lcp-js/dist/es6-es2015/src/serializable';
+import {OPDSFeed} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2';
+import {OPDSAuthenticationDoc} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-authentication-doc';
+import {OPDSFacet} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-facet';
+import {OPDSGroup} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-group';
+import {OPDSLink} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-link';
+import {OPDSProperties} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-properties';
+import {OPDSPublication} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-publication';
+import {Contributor} from 'r2-shared-js/dist/es6-es2015/src/models/metadata-contributor';
+import {Subject} from 'r2-shared-js/dist/es6-es2015/src/models/metadata-subject';
 
 import {fallback} from './tools/fallback';
 import {filterRelLink, filterTypeLink} from './tools/filterLink';
@@ -36,7 +36,7 @@ import {ILinkFilter} from './type/linkFilter.interface';
 import {
   initGlobalConverters_GENERIC,
   initGlobalConverters_OPDS,
-} from '@r2-opds-js/opds/init-globals';
+} from 'r2-opds-js/dist/es6-es2015/src/opds/init-globals';
 
 initGlobalConverters_GENERIC();
 initGlobalConverters_OPDS();

@@ -3,7 +3,7 @@ import * as moment from 'moment';
 import {IReadingLink, IWebPubView} from '../interface/webpub';
 import {convertContributorArrayToStringArray} from './tools/localisation';
 
-import {Publication as R2Publication} from '@r2-shared-js/models/publication';
+import {Publication as R2Publication} from 'r2-shared-js/dist/es6-es2015/src/models/publication';
 import {fallback} from './tools/fallback';
 import {convertMultiLangStringToString} from './tools/localisation';
 import {OpdsFeedViewConverter} from './opds';
