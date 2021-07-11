@@ -1,1 +1,1 @@
-export {OpdsService as opdsFetcher} from './service/opds';
+export {OpdsService as OpdsFetcher} from './service/opds';
