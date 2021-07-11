@@ -13,21 +13,23 @@ import {IWebPubView} from '../interface/webpub';
 import {ok} from 'assert';
 import {OpdsFeedViewConverter} from '../converter/opds';
 import {WebpubViewConverter} from '../converter/webpub';
-import {http} from 'ts-fetch';
+import {http, fetchCookieFactory} from 'ts-fetch';
+import {IAuthenticationToken} from 'ts-fetch/build/src/http.type';
 
 const debug = console.log;
 
 export class OpdsService {
-  opdsFeedViewConverter: OpdsFeedViewConverter;
-  webpubViewConverter: WebpubViewConverter;
-  _http: http;
+  private opdsFeedViewConverter: OpdsFeedViewConverter;
+  private webpubViewConverter: WebpubViewConverter;
+  private _http: http;
 
-  constructor() {
+  constructor(authenticationToken?: Record<string, IAuthenticationToken>/*cookieStorage?: string | CookieJar.Serialized*/) {
     this.opdsFeedViewConverter = new OpdsFeedViewConverter();
     this.webpubViewConverter = new WebpubViewConverter(
       this.opdsFeedViewConverter
     );
-    this._http = new http();
+    // const fetchInstance = fetchCookieFactory.init(cookieStorage);
+    this._http = new http(fetchCookieFactory.fetch, authenticationToken);
   }
 
   public async feedRequest(url: string): Promise<IOpdsResultView> {

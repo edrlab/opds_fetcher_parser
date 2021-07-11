@@ -33,6 +33,6 @@
     "r2-lcp-js": "^1.0.30",
     "r2-opds-js": "^1.0.35",
     "r2-shared-js": "^1.0.51",
-    "ts-fetch": "github:panaC/ts_fetch#132895f52167ca8b1d51549c9e597b12e4bc5c73"
+    "ts-fetch": "github:panaC/ts_fetch#47018c7ddf267a4427cc9a7fe0413bf268cc9ee8"
   }
 }
