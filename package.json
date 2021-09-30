@@ -1,6 +1,6 @@
 {
   "name": "opds-fetcher-parser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -33,6 +33,6 @@
     "r2-lcp-js": "^1.0.30",
     "r2-opds-js": "^1.0.35",
     "r2-shared-js": "^1.0.51",
-    "ts-fetch": "github:panaC/ts_fetch#47018c7ddf267a4427cc9a7fe0413bf268cc9ee8"
+    "ts-fetch": "github:panaC/ts_fetch#7f585951111aa0e9cb7fe7f99bdd927a9261cd7b"
   }
 }
