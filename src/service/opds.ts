@@ -224,11 +224,11 @@ export class OpdsService {
       } as IOpdsResultView;
     } else if (isFeed) {
       const r2OpdsFeed = TaJsonDeserialize(jsonObj, OPDSFeed);
-      const {title, publications: _pubs} =
+      const resultView =
         this.opdsFeedViewConverter.convertOpdsFeedToView(r2OpdsFeed, baseUrl);
       return {
-        title,
-        publications: Array.isArray(_pubs) ? _pubs : [],
+        ...resultView,
+        publications: Array.isArray(resultView.publications) ? resultView.publications : [],
       };
     }
 
