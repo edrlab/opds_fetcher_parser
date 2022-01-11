@@ -7,7 +7,13 @@
   "files": [
     "build/src"
   ],
-  "license": "Apache-2.0",
+  "license": "BSD-3-Clause",
+  "licenses": [
+    {
+      "type": "BSD-3-Clause",
+      "url": "http://opensource.org/licenses/BSD-3-Clause"
+    }
+  ],
   "keywords": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,6 +39,6 @@
     "r2-lcp-js": "^1.0.30",
     "r2-opds-js": "^1.0.35",
     "r2-shared-js": "^1.0.51",
-    "ts-fetch": "github:panaC/ts_fetch#7f585951111aa0e9cb7fe7f99bdd927a9261cd7b"
+    "ts-fetch": "github:edrlab/ts_fetch#22bb17428a73c2121a8e504074e13b00f865ef63"
   }
 }
