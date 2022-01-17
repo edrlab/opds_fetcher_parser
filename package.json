@@ -39,6 +39,6 @@
     "r2-lcp-js": "^1.0.30",
     "r2-opds-js": "^1.0.35",
     "r2-shared-js": "^1.0.51",
-    "ts-fetch": "github:edrlab/ts_fetch#22bb17428a73c2121a8e504074e13b00f865ef63"
+    "ts-fetch": "github:edrlab/ts_fetch"
   }
 }
