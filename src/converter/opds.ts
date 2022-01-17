@@ -16,7 +16,10 @@ import {
 import {convertMultiLangStringToString} from './tools/localisation';
 import {ContentType} from '../utils/contentType';
 
-import {IWithAdditionalJSON, TaJsonSerialize} from 'r2-lcp-js/dist/es6-es2015/src/serializable';
+import {
+  IWithAdditionalJSON,
+  TaJsonSerialize,
+} from 'r2-lcp-js/dist/es6-es2015/src/serializable';
 import {OPDSFeed} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2';
 import {OPDSAuthenticationDoc} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-authentication-doc';
 import {OPDSFacet} from 'r2-opds-js/dist/es6-es2015/src/opds/opds2/opds2-facet';

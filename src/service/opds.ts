@@ -14,7 +14,6 @@ import {ok} from 'assert';
 import {OpdsFeedViewConverter} from '../converter/opds';
 import {WebpubViewConverter} from '../converter/webpub';
 import {http, fetchCookieFactory} from 'ts-fetch';
-import {IAuthenticationToken} from 'ts-fetch/build/src/http.type';
 
 const debug = console.log;
 
@@ -23,13 +22,13 @@ export class OpdsService {
   private webpubViewConverter: WebpubViewConverter;
   private _http: http;
 
-  constructor(authenticationToken?: Record<string, IAuthenticationToken>/*cookieStorage?: string | CookieJar.Serialized*/) {
+  constructor(__http: http | undefined) {
     this.opdsFeedViewConverter = new OpdsFeedViewConverter();
     this.webpubViewConverter = new WebpubViewConverter(
       this.opdsFeedViewConverter
     );
     // const fetchInstance = fetchCookieFactory.init(cookieStorage);
-    this._http = new http(fetchCookieFactory.fetch, authenticationToken);
+    this._http = __http || new http(fetchCookieFactory.fetch);
   }
 
   public async feedRequest(url: string): Promise<IOpdsResultView> {
@@ -224,11 +223,15 @@ export class OpdsService {
       } as IOpdsResultView;
     } else if (isFeed) {
       const r2OpdsFeed = TaJsonDeserialize(jsonObj, OPDSFeed);
-      const resultView =
-        this.opdsFeedViewConverter.convertOpdsFeedToView(r2OpdsFeed, baseUrl);
+      const resultView = this.opdsFeedViewConverter.convertOpdsFeedToView(
+        r2OpdsFeed,
+        baseUrl
+      );
       return {
         ...resultView,
-        publications: Array.isArray(resultView.publications) ? resultView.publications : [],
+        publications: Array.isArray(resultView.publications)
+          ? resultView.publications
+          : [],
       };
     }
 
