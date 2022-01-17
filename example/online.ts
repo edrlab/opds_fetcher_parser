@@ -1,7 +1,7 @@
 import {dir} from 'console';
-import {OpdsService} from '../src/service/opds';
+import {OpdsFetcher} from 'opds-fetcher-parser';
 
-const opds = new OpdsService();
+const opds = new OpdsFetcher();
 
 (async () => {
   const feed = await opds.feedRequest(

@@ -1,6 +1,6 @@
 import {dir} from 'console';
-import {OpdsService} from '../src/service/opds';
-import {http, AuthenticationStorage} from '../src';
+import {OpdsFetcher} from 'opds-fetcher-parser';
+import {http, AuthenticationStorage} from 'opds-fetcher-parser';
 
 const authenticationStorage = new AuthenticationStorage();
 authenticationStorage.setAuthenticationToken({
@@ -11,7 +11,7 @@ authenticationStorage.setAuthenticationToken({
 });
 const _http = new http(undefined, authenticationStorage);
 
-const opds = new OpdsService(_http);
+const opds = new OpdsFetcher(_http);
 
 (async () => {
   const feed = await opds.feedRequest(
