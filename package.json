@@ -7,6 +7,9 @@
   "files": [
     "build/src"
   ],
+  "engines": {
+    "node": "14"
+  },
   "license": "BSD-3-Clause",
   "licenses": [
     {
@@ -39,6 +42,6 @@
     "r2-lcp-js": "^1.0.30",
     "r2-opds-js": "^1.0.35",
     "r2-shared-js": "^1.0.51",
-    "ts-fetch": "github:edrlab/ts_fetch#709719be762e4921b6e935f5d7105764cfaccae4"
+    "ts-fetch": "github:edrlab/ts_fetch#a55cdd950c57e060f9950808af5ddc5d87754263"
   }
 }
