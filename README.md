@@ -4,6 +4,12 @@
 npm install https://github.com/edrlab/opds_fetcher_parser.git
 ```
 
+or with node14
+
+```
+npm install git+https://github.com/edrlab/opds_fetcher_parser.git
+```
+
 ## demo
 
 ```ts
