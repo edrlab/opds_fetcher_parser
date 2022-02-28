@@ -34,6 +34,7 @@ export enum ContentType {
   lcppdf = 'application/pdf+lcp',
   pdf = 'application/pdf',
   ApiProblem = 'application/api-problem+json',
+  binary = 'binary/octet-stream',
 }
 
 export const parseContentType = (

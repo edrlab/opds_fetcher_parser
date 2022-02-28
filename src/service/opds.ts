@@ -75,6 +75,7 @@ export class OpdsService {
         const contentType = parseContentType(_contentType || '');
 
         if (
+          contentType === ContentType.binary || // specific s3 storage fixes
           contentType === ContentType.webpub ||
           contentType === ContentType.Json ||
           contentType === ContentType.JsonLd
