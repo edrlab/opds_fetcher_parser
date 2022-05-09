@@ -17,9 +17,11 @@ export class WebpubViewConverter {
   // Note: PublicationDocument and PublicationView are both Identifiable, with identical `identifier`
   public convertWebpubToView(
     r2Publication: R2Publication,
-    baseUrl: string
+    baseUrlFromParam: string
   ): IWebPubView {
     const title = convertMultiLangStringToString(r2Publication.Metadata.Title);
+    const selfLink = r2Publication.searchLinkByRel('self');
+    const baseUrl = selfLink?.Href || baseUrlFromParam;
     const publishers = convertContributorArrayToStringArray(
       r2Publication.Metadata.Publisher
     );
