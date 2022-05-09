@@ -61,10 +61,7 @@ export class OpdsService {
     return res.data;
   }
 
-  public async webpubRequest(
-    url: string,
-    baseUrlFromParam?: string
-  ): Promise<IWebPubView> {
+  public async webpubRequest(url: string): Promise<IWebPubView> {
     const res = await this._http.get<IWebPubView>(
       url,
       undefined,
@@ -74,7 +71,7 @@ export class OpdsService {
           // responseUrl,
           contentType: _contentType,
         } = webpubData;
-        const baseUrl = baseUrlFromParam || `${_baseUrl}`;
+        const baseUrl = `${_baseUrl}`;
         const contentType = parseContentType(_contentType || '');
 
         if (
