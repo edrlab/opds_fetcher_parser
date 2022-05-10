@@ -68,7 +68,7 @@ export class WebpubViewConverter {
         baseUrl,
         r2Publication.Spine,
         {
-          //          type: ['audio/mpeg'],
+          type: /audio\/.*/,
         }
       );
 
